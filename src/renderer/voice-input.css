@@ -1,0 +1,8 @@
+.voice-input { position: relative; flex-shrink: 0; }
+.voice-button { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #7d906f; border-radius: 8px; background: transparent; color: #34512c; }
+.voice-button:hover:not(:disabled) { background: #edf2e7; }
+.voice-button.recording { background: #8b382a; color: #fff; border-color: #8b382a; }
+.voice-stop { width: 14px; height: 14px; border-radius: 3px; background: currentColor; }
+.voice-status { position: absolute; right: 0; bottom: calc(100% + 15px); width: max-content; max-width: min(390px, 70vw); padding: 12px 15px; border: 1px solid #a2b297; border-radius: 8px; color: #344831; background: #fffefa; box-shadow: 0 5px 20px #24371c13; font-size: 15px; line-height: 1.65; z-index: 12; }
+.voice-status.error { color: #82462c; border-color: #b48972; padding-right: 38px; }
+.voice-status > button { position: absolute; right: 5px; top: 5px; width: 30px; height: 30px; border: 0; background: transparent; font-size: 22px; color: #82462c; }

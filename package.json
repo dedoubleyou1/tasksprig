@@ -1,0 +1,55 @@
+{
+  "name": "tasksprig",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A local desktop task companion with agent-authored behavior and custom lists",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dedoubleyou1/tasksprig.git"
+  },
+  "homepage": "https://github.com/dedoubleyou1/tasksprig#readme",
+  "bugs": {
+    "url": "https://github.com/dedoubleyou1/tasksprig/issues"
+  },
+  "type": "module",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "tsc --noEmit && vite build && node scripts/build-main.mjs",
+    "start": "electron .",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "smoke": "node scripts/smoke.mjs",
+    "package:mac": "node scripts/package-mac.mjs",
+    "check:live": "node scripts/build-live-check.mjs && electron dist/live-check.js",
+    "check:voice": "node scripts/build-live-voice-check.mjs && electron dist/live-voice-check.js"
+  },
+  "dependencies": {
+    "@earendil-works/pi-agent-core": "^1.4.0",
+    "@earendil-works/pi-ai": "^1.4.0",
+    "quickjs-emscripten": "^0.32.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "sql.js": "^1.15.1",
+    "typebox": "^1.4.2",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/sql.js": "^1.4.11",
+    "@types/ws": "^8.18.2",
+    "electron": "^45.0.0",
+    "esbuild": "^0.28.2",
+    "playwright-core": "^1.64.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  },
+  "engines": {
+    "node": ">=22.19"
+  }
+}
